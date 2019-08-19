@@ -1,0 +1,930 @@
+/* font-family: 'Saira', sans-serif;
+font-family: 'Saira Condensed', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+div.wrapper {
+    max-width: 1960px;
+    margin: 0 auto;
+}
+
+/* nawigacja */
+.baner {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.baner>i {
+    font-size: 11px;
+    margin-left: 10%;
+    animation: signIn 2s 1 both;
+}
+
+.sign {
+    color: white;
+    padding: 0 4px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 8vh;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.burger {
+    margin: 0px 15px 0 auto;
+}
+
+.fas {
+    color: white;
+    font-size: 20px;
+    line-height: 8vh;
+}
+
+i.off {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    top: 8vh;
+    left: 66%;
+    width: 100%;
+    z-index: 10;
+    transition: .5s;
+}
+
+nav.off {
+    left: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 0.2px solid gray;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+nav li a {
+    display: block;
+    font-size: 12px;
+    color: whitesmoke;
+    text-decoration: none;
+    line-height: 5vh;
+    padding: 0 0 0 15px;
+    text-transform: uppercase;
+}
+
+/* header */
+header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+}
+
+header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.4);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+    animation: headerImages 9s linear infinite both;
+}
+
+header img:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+header img:nth-of-type(3) {
+    top: 40%;
+    left: 30%;
+    animation-delay: 6s;
+}
+
+header p {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    padding: 10px 22px;
+    color: white;
+    font-size: 33px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: headerP 9s linear infinite both;
+
+}
+
+header p:nth-last-of-type(2) {
+    top: 20%;
+    left: 18%;
+    animation-delay: 3s;
+}
+
+header p:nth-last-of-type(3) {
+    top: 50%;
+    animation-delay: 6s;
+}
+
+
+@media (orientation: landscape) {
+    .baner {
+        height: 12vh;
+    }
+
+    .baner>i {
+        font-size: 13px;
+        line-height: 12vh;
+    }
+
+    .sign {
+        line-height: 12vh;
+        font-size: 20px;
+    }
+
+    .fas {
+        font-size: 23px;
+        line-height: 12vh;
+    }
+
+    nav {
+        top: 12vh;
+    }
+
+    li {
+        padding: 10px 25px;
+        border: .2px solid gray;
+    }
+
+    nav li a {
+        display: block;
+        font-size: 15px;
+        height: 100%;
+        width: 100%;
+        color: whitesmoke;
+        text-decoration: none;
+        line-height: 5vh;
+        text-transform: uppercase;
+    }
+
+    header img:nth-of-type(3) {
+        top: 60%;
+        left: 50%;
+    }
+
+    header p {
+        font-size: 24px;
+
+    }
+
+}
+
+@media(min-width: 360px) and (orientation:portrait) {
+    header img {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
+
+@media(min-width: 411px) and (orientation:portrait) {
+    header img {
+        transform: translate(-50%, -50%) scale(1);
+        animation-name: headerImages2;
+    }
+
+    header img:nth-of-type(3) {
+        top: 50%;
+        left: 40%;
+    }
+}
+
+@media(min-width:750px) and (orientation:portrait) {
+    .baner {
+        height: 10vh;
+    }
+
+    .baner>i {
+        font-size: 15px;
+        line-height: 10vh;
+    }
+
+    .sign {
+        line-height: 10vh;
+        font-size: 30px;
+    }
+
+    .baner>i {
+        font-size: 18px;
+    }
+
+    .burger>i {
+        margin-right: 10px;
+        font-size: 30px;
+        line-height: 10vh;
+    }
+
+    nav {
+        top: 15vh;
+    }
+
+    header p {
+        font-size: 42px;
+    }
+
+    nav {
+        top: 10vh;
+    }
+
+    nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        color: whitesmoke;
+        text-decoration: none;
+        line-height: 6vh;
+        text-transform: uppercase;
+    }
+}
+
+@media(min-width:800px) and (orientation:landscape) {
+    .baner {
+        height: 15vh;
+    }
+
+    .baner>i {
+        font-size: 15px;
+        line-height: 15vh;
+    }
+
+    .sign {
+        line-height: 15vh;
+        font-size: 25px;
+    }
+
+    .fas {
+        font-size: 25px;
+        line-height: 15vh;
+    }
+
+    nav {
+        top: 15vh;
+    }
+
+
+}
+
+
+/* pc */
+
+@media(min-width:1024px) {
+    header img {
+        transform: translate(-50%, -50%) scale(1);
+        animation: headerImages2 9s linear infinite both;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .baner {
+        position: absolute;
+        width: 30%;
+        height: 8vh;
+        z-index: 1;
+    }
+
+    .baner>i {
+        font-size: 18px;
+        line-height: 8vh;
+        margin-left: 3%;
+    }
+
+    .sign {
+        line-height: 8vh;
+        font-size: 32px;
+    }
+
+    nav.active {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 70%;
+        height: 8vh;
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    ul {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    li {
+        position: relative;
+        flex-grow: 1;
+        border: none;
+        background-color: transparent;
+    }
+
+    li::after {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .4);
+        transition: .2s linear;
+        z-index: -1;
+    }
+
+    nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 23px;
+        line-height: 8vh;
+
+    }
+
+    li:hover::after {
+        top: 0;
+    }
+
+    header p {
+        font-size: 45px;
+    }
+}
+
+
+@media(min-width:1024px) and (orientation: landscape) {
+
+    nav li a {
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        line-height: 6vh;
+
+    }
+}
+
+@media(min-width:1600px) {
+    header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 1;
+        animation: headerImagesBig 9s linear infinite both;
+    }
+}
+
+
+/* sections */
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.sMe {
+    height: 100vh;
+    background-image: url(../Img/PAweł.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    position: relative;
+    width: 100%;
+    padding: 12px 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-family: 'Saira Condensed', sans-serif;
+    background-color: #000;
+    z-index: 3;
+}
+
+.sMe::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    height: 150vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.sMe p {
+    position: relative;
+    margin-top: 50%;
+    padding: 20px 5%;
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Saria', sans-serif;
+    transform: translateY(10%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    font-weight: 300;
+    transition: .4s;
+    opacity: 0;
+
+}
+
+.sMe p.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(orientation:landscape) {
+    .sMe {
+        height: 110vh;
+    }
+
+    .sMe p {
+        margin-top: 20%;
+    }
+}
+
+@media(min-width:375px) and (orientation:portrait) {
+    .sMe p {
+        margin-top: 50%;
+        font-size: 18px;
+    }
+}
+
+@media(min-width:750px) and (orientation:portrait) {
+    .sMe p {
+        font-size: 25px;
+        margin-top: 40%;
+    }
+
+}
+
+@media(min-width:1024px) {
+    .sMe p {
+        font-size: 32px;
+        margin-top: 50%;
+    }
+
+}
+
+@media(min-width:1024px) and (orientation:landscape) {
+    .sMe p {
+        font-size: 25px;
+        margin-top: 30%;
+    }
+
+}
+
+@media(min-width:1300px) {
+    .sMe p {
+        font-size: 35px;
+        margin-top: 20%;
+    }
+
+}
+
+.sOpinion {
+    background-color: royalblue;
+}
+
+.sContact {
+    background-color: black;
+}
+
+.sPortfolio {
+    min-height: 190vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.sPortfolio div {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    transition: .4s linear;
+}
+
+.sPortfolio div a {
+    width: 100%;
+    height: 100%;
+}
+
+.sPortfolio img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.3);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.sPortfolio div:nth-of-type(even) {
+    left: 100%;
+}
+
+.sPortfolio div:nth-of-type(odd) {
+    left: -100%;
+}
+
+.sPortfolio div.anim.active {
+    left: 0;
+}
+
+.sPortfolio div:nth-of-type(5),
+.sPortfolio div:nth-of-type(6),
+.sPortfolio div:nth-of-type(7),
+.sPortfolio div:nth-of-type(8) {
+    display: none;
+}
+
+.sPortfolio>a {
+    display: none;
+}
+
+.sContact>h1>span {
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.sContact>h1>span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-left: 2px solid white;
+    animation: cursor .5s infinite both, typing 3s steps(8, start) infinite both;
+}
+
+.sContact>ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sContact>ul li {
+    display: flex;
+    flex-basis: 20vh;
+    font-size: 20px;
+    border: none;
+
+}
+
+.sContact p {
+    color: white;
+    line-height: 15vh;
+}
+
+.sContact a {
+    display: block;
+    width: 10%;
+    line-height: 15vh;
+    text-align: center;
+    transition: .4s;
+}
+
+.sContact a i {
+    width: 100%;
+}
+
+.sContact i {
+    display: block;
+    width: 10%;
+    color: white;
+    text-align: center;
+    line-height: 15vh;
+}
+
+@media(orientation:landscape) {
+    .sPortfolio {
+        min-height: 400vh;
+    }
+
+    .sPortfolio img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45%) scale(.4);
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+@media(min-width:750px) and (orientation:portrait) {
+    .sPortfolio img {
+        transform: translate(-50%, -50%) scale(.4);
+    }
+
+    h1 {
+        padding: 20px 0;
+        font-size: 50px;
+    }
+
+    .sContact>ul li {
+        font-size: 30px;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    padding: 0 10%;
+}
+
+@media(min-width:1024px) {
+    .sPortfolio img {
+        transform: translate(-50%, -50%) scale(.8);
+        transition: .3s linear;
+    }
+
+    h1 {
+        padding: 25px 0;
+        font-size: 60px;
+    }
+
+    .sPortfolio div:hover img {
+        cursor: pointer;
+    }
+
+    .sContact>ul li {
+        font-size: 35px;
+    }
+
+    .sContact a:hover {
+        font-size: 50px;
+    }
+}
+
+@media(min-width:1024px) and (orientation:portrait) {
+    .sPortfolio img {
+        transform: translate(-50%, -50%) scale(.6);
+    }
+
+    h1 {
+        padding: 25px 0;
+        font-size: 60px;
+    }
+
+}
+
+
+@media(min-width:1280px) {
+
+    .sPortfolio div:nth-of-type(5),
+    .sPortfolio div:nth-of-type(6),
+    .sPortfolio div:nth-of-type(7),
+    .sPortfolio div:nth-of-type(8) {
+        display: block;
+    }
+
+    .sPortfolio img {
+        transform: translate(-50%, -50%) scale(.6);
+        filter: grayscale(1);
+    }
+
+    .sPortfolio div:nth-of-type(even) {
+        left: 0;
+        opacity: 0;
+        transition-delay: .3s;
+    }
+
+    .sPortfolio div:nth-of-type(odd) {
+        left: 0;
+        opacity: 0;
+    }
+
+    .sPortfolio div.anim.active {
+        opacity: 1;
+    }
+
+
+    .sPortfolio {
+        min-height: 190vh;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .sPortfolio div {
+        position: relative;
+        flex-basis: 30%;
+        min-height: 60vh;
+
+    }
+
+    .sPortfolio h2 {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        padding-top: 40px;
+        height: 50%;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-family: 'Saira', sans-serif;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: .3s linear;
+    }
+
+    .sPortfolio div:hover img {
+        filter: grayscale(0);
+        cursor: pointer;
+    }
+
+    .sPortfolio div:hover h2 {
+        top: 70%;
+    }
+
+    /* 
+    dodać kilka zdj, na początku będą display:none, potem jak już będzie wygląd na PC to się pojawią (może ogarnij efekt pojawiania się jak u rihanny!) dodając zdj musisz dodać animacje w JS dla kolejnego zdj! 
+    zmień z-index NAV NA 100000
+    */
+}
+
+
+@keyframes headerImages {
+    0% {
+        transform: translate(-55%, -45%) scale(.8);
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    33.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes headerImages2 {
+    0% {
+        transform: translate(-55%, -50%);
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    33.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes headerImagesBig {
+    0% {
+        transform: translate(-55%, -50%) scale(1.3);
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    33.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes headerP {
+    0% {
+        transform: translateX(15%);
+        opacity: 0;
+    }
+
+    3% {
+        opacity: .8;
+    }
+
+    30% {
+        opacity: .8;
+    }
+
+    33.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes signIn {
+    0% {
+        transform: translateX(-500%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-color: transparent;
+    }
+
+    10% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: white;
+    }
+
+    75% {
+        border-color: white;
+    }
+
+    90% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
